@@ -7,7 +7,7 @@ from pep_parse.settings import ALLOWED_DOMAIN
 class PepSpider(scrapy.Spider):
     name = 'pep'
     allowed_domains = (ALLOWED_DOMAIN,)
-    start_urls = (f'https://{ALLOWED_DOMAIN}/',)
+    start_urls = [f'https://{ALLOWED_DOMAIN}/']
 
     def parse(self, response):
         peps_links = response.css(
