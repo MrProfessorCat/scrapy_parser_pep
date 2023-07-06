@@ -23,7 +23,7 @@ class PepParsePipeline:
             )
         )
         with open(filename, mode='w', encoding='utf-8') as file:
-            file.write('Статус,Количество\n')
+            file.write('Status,Amount\n')
             for status, num in sorted(
                 self.statistic.items(),
                 key=lambda item: item[1],
